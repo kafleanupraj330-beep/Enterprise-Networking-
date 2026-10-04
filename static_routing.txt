@@ -1,0 +1,66 @@
+Tue Aug 25 15:22:12 2026   Router0   Router>en 
+Tue Aug 25 15:23:45 2026   Router0   Router#config t
+Tue Aug 25 15:25:34 2026   Router0   Router(config)#hostname AnupRajkafle2607985-R0
+Tue Aug 25 15:26:11 2026   Router0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/0
+Tue Aug 25 15:27:42 2026   Router0   AnupRajkafle2607985-R0(config-if)#ip address 192.168.1.1 255.255.255.0
+Tue Aug 25 15:27:56 2026   Router0   AnupRajkafle2607985-R0(config-if)#no shutdown 
+Tue Aug 25 15:28:23 2026   Router0   AnupRajkafle2607985-R0(config-if)#exit 
+Tue Aug 25 15:28:26 2026   Router0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/0
+Tue Aug 25 15:28:39 2026   Router0   AnupRajkafle2607985-R0(config-if)#exit
+Tue Aug 25 15:28:39 2026   Router0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/1
+Tue Aug 25 15:29:48 2026   Router0   AnupRajkafle2607985-R0(config-if)#ip address 192.168.2.1 255.255.255.0
+Tue Aug 25 15:29:55 2026   Router0   AnupRajkafle2607985-R0(config-if)#no shutdown 
+Tue Aug 25 15:30:01 2026   Router0   AnupRajkafle2607985-R0(config-if)#exit 
+Tue Aug 25 15:30:07 2026   Router0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/1
+Tue Aug 25 15:30:18 2026   Router0   AnupRajkafle2607985-R0(config-if)#exit
+Tue Aug 25 15:30:19 2026   Router0   AnupRajkafle2607985-R0(config)#interface Serial0/1/0
+Tue Aug 25 15:31:04 2026   Router0   AnupRajkafle2607985-R0(config-if)#ip address 10.0.0.1 255.255.255.252
+Tue Aug 25 15:31:09 2026   Router0   AnupRajkafle2607985-R0(config-if)#no shutdown 
+Tue Aug 25 15:34:45 2026   Router0   AnupRajkafle2607985-R0(config-if)#exit
+Tue Aug 25 15:34:45 2026   Router0   AnupRajkafle2607985-R0(config)#interface Serial0/1/0
+Tue Aug 25 15:34:52 2026   Router0   AnupRajkafle2607985-R0(config-if)#shutdown
+Tue Aug 25 15:34:53 2026   Router0   AnupRajkafle2607985-R0(config-if)#no shutdown
+Tue Aug 25 15:38:02 2026   Router1   Router>en 
+Tue Aug 25 15:38:10 2026   Router1   Router#config t 
+Tue Aug 25 15:38:21 2026   Router1   Router(config)#hostname AnupRajkafle2607985-R1
+Tue Aug 25 15:38:40 2026   Router1   AnupRajkafle2607985-R1(config)#interface GigabitEthernet0/0/0
+Tue Aug 25 15:40:34 2026   Router1   AnupRajkafle2607985-R1(config-if)#ip address 192.168.3.1 255.255.255.0
+Tue Aug 25 15:40:40 2026   Router1   AnupRajkafle2607985-R1(config-if)#no shutdown 
+Tue Aug 25 15:40:47 2026   Router1   AnupRajkafle2607985-R1(config-if)#exit 
+Tue Aug 25 15:40:49 2026   Router1   AnupRajkafle2607985-R1(config)#interface GigabitEthernet0/0/0
+Tue Aug 25 15:40:51 2026   Router1   AnupRajkafle2607985-R1(config-if)#exit
+Tue Aug 25 15:40:51 2026   Router1   AnupRajkafle2607985-R1(config)#interface GigabitEthernet0/0/1
+Tue Aug 25 15:41:20 2026   Router1   AnupRajkafle2607985-R1(config-if)#ip address 192.168.4.1 255.255.255.0
+Tue Aug 25 15:41:25 2026   Router1   AnupRajkafle2607985-R1(config-if)#no shutdown 
+Tue Aug 25 15:41:29 2026   Router1   AnupRajkafle2607985-R1(config-if)#exit 
+Tue Aug 25 15:41:32 2026   Router1   AnupRajkafle2607985-R1(config)#interface GigabitEthernet0/0/1
+Tue Aug 25 15:41:41 2026   Router1   AnupRajkafle2607985-R1(config-if)#exit
+Tue Aug 25 15:41:41 2026   Router1   AnupRajkafle2607985-R1(config)#interface Serial0/1/1
+Tue Aug 25 15:42:16 2026   Router1   AnupRajkafle2607985-R1(config-if)#ip address 10.0.0.2 255.255.255.252 
+Tue Aug 25 15:42:22 2026   Router1   AnupRajkafle2607985-R1(config-if)#no shutdown 
+Tue Aug 25 15:46:17 2026   Router1   AnupRajkafle2607985-R1(config-if)#exit 
+Tue Aug 25 15:46:29 2026   Router1   AnupRajkafle2607985-R1(config)#exit 
+Tue Aug 25 15:49:42 2026   Router0   AnupRajkafle2607985-R0>en 
+Tue Aug 25 15:49:46 2026   Router0   AnupRajkafle2607985-R0#config t 
+Tue Aug 25 15:51:50 2026   Router0   AnupRajkafle2607985-R0(config)#ip route 192.168.3.0 255.255.255.0 10.0.0.2
+Tue Aug 25 15:52:02 2026   Router0   AnupRajkafle2607985-R0(config)#ip route 192.168.4.0 255.255.255.0 10.0.0.2
+Tue Aug 25 15:52:42 2026   Router1   AnupRajkafle2607985-R1#cinfig t 
+Tue Aug 25 15:52:50 2026   Router1   AnupRajkafle2607985-R1#config t
+Tue Aug 25 15:53:50 2026   Router1   AnupRajkafle2607985-R1(config)#ip route 192.168.1.0 255.255.255.0 10.0.0.1 
+Tue Aug 25 15:54:06 2026   Router1   AnupRajkafle2607985-R1(config)#ip route 192.168.2.0 255.255.255.0 10.0.0.1 
+Tue Aug 25 16:26:19 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0>en
+Tue Aug 25 16:26:37 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0#show ip interface brief 
+Tue Aug 25 16:26:58 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0#show ip route 
+Tue Aug 25 16:28:29 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0#ping 192.168.3.30
+Tue Aug 25 16:29:19 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0#traceroute 192.168.3.30
+Tue Aug 25 18:43:13 2026   AnupRajkafle2607985-R1   AnupRajkafle2607985-R1>EN
+Tue Aug 25 18:49:36 2026   AnupRajkafle2607985-R1   AnupRajkafle2607985-R1#show ip interface brief 
+Tue Aug 25 18:49:55 2026   AnupRajkafle2607985-R1   AnupRajkafle2607985-R1#show ip route 
+Tue Aug 25 18:51:22 2026   AnupRajkafle2607985-R1   AnupRajkafle2607985-R1#ping 192.168.2.20
+Tue Aug 25 18:52:48 2026   AnupRajkafle2607985-R1   AnupRajkafle2607985-R1#traceroute 192.168.2.20
+Tue Aug 25 18:57:29 2026   PC5   C:\>en 
+Tue Aug 25 21:03:15 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0>en 
+Tue Aug 25 21:03:18 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0#config t 
+Tue Aug 25 21:07:20 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/0
+Tue Aug 25 21:07:23 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0(config-if)#exit
+Tue Aug 25 21:07:23 2026   AnupRajkafle2607985-R0   AnupRajkafle2607985-R0(config)#interface GigabitEthernet0/0/1
